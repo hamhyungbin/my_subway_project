@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>수도권 지하철 경로 검색</title>
+    </head>
+<body>
+    <h1>수도권 지하철 경로 검색</h1>
+    <form id="search-form">
+        <input type="text" id="start_station" placeholder="출발역 ID (예: 222)" required>
+        <input type="text" id="end_station" placeholder="도착역 ID (예: 216)" required>
+        <button type="submit">경로 검색</button>
+    </form>
+
+    <hr>
+    <h2>검색 결과</h2>
+    <div id="result-container">
+        <p>여기에 검색 결과가 표시됩니다.</p>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

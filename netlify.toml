@@ -1,0 +1,13 @@
+# netlify.toml
+[build]
+  command = "echo 'No build command needed'" # 정적 파일이므로 특별한 빌드 명령 없음
+  publish = "public"      # 'public' 폴더를 웹사이트로 배포
+  functions = "netlify/functions" # 'netlify/functions' 폴더에서 함수를 찾음
+
+[functions]
+  included_files = ["!**/__pycache__/**"] # 파이캐시 제외
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
